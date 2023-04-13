@@ -1,0 +1,18 @@
+{% extends 'login/base.html' %}
+
+
+{% block content %}
+
+<section class="jumbotron text-center">
+    <h4>
+        {% if request.user.is_authenticated %}
+            {{ user.username | upper}} 
+            {% endif %}
+    
+    </h4>
+    
+
+</section>
+
+
+{% endblock %}

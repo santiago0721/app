@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    {% load crispy_forms_tags %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <br>
+        <div class="card mx-auto" style="width: 25rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrRnFNuGn471F5v8Ans0ksKiGZtcVUdr_4gEWo_Qs33bORjNKxwxy-c3p1YKoHtsXQKt4&usqp=CAU" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Inicio sesión</h5>
+                {{ form | crispy }}
+                
+            </div>
+            <div class="card-body">
+              <a href={% url 'register' %} class="card-link">registrarse</a>
+              <button class="" type="submit">Iniciar sesión</button>
+              
+            </div>
+          </div>
+        
+    
+    </form>
+
+</body>
+</html>
+
+    
+
